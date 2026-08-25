@@ -27,7 +27,7 @@
 
 ## 项目简介
 
-精神分裂症的临床诊断高度依赖结构化访谈，存在评分者间差异大、诊断延迟等问题。脑电图（EEG）以低成本、高时间分辨率为客观分类提供了可能，但现有深度 EEG 方法存在两个核心局限：
+精神分裂症的临床诊断高度依赖结构化访谈，存在评分者间差异大、诊断延迟等问题。脑电图（EEG）以低成本、高时间分辨率为客观分类提供了可能，但现有深度学习 EEG 方法存在两个核心局限：
 
 1. **未显式建模节律特异性振荡异常**——精神分裂症的神经生理障碍表现为各频段（delta/theta/alpha/beta/gamma）内的异常活动及频段间的病理性耦合，而通用时空模型无法区分这些节律特异性特征。
 2. **缺乏功能网络拓扑先验**——头皮 EEG 受容积传导影响空间特异性有限，而 fMRI 可在脑区层面刻画默认网络、突显网络、额顶控制网络的失连接模式，这些信息无法被纯 EEG 模型获取。
@@ -46,11 +46,11 @@ fMRI 教师仅在训练阶段使用，**推理时 TopoDistill-Net 仅需原始 E
 如果您在研究中使用了本代码，请引用以下论文：
 
 ```bibtex
-@article{liu2025topodistill,
+@article{liu2026topodistill,
   title   = {TopoDistill-Net: Topology-Aligned Cross-Modal Distillation from fMRI to EEG for Schizophrenia Detection},
   author  = {Liu, Ke and Xu, Rui and Wang, Wenlong and Xiao, Bin and Wu, Wei},
-  journal = {IEEE Transactions on Biomedical Engineering},
-  year    = {2025},
+  journal = {IEEE Journal of Biomedical and Health Informatics (JBHI)},
+  year    = {2026},
   note    = {Under Review}
 }
 ```
@@ -66,6 +66,8 @@ fMRI 教师仅在训练阶段使用，**推理时 TopoDistill-Net 仅需原始 E
 ---
 
 ## 模型架构
+<img width="779" height="389" alt="image" src="https://github.com/user-attachments/assets/01865191-a39c-4734-8bdd-7e4be88035ef" />
+
 
 ### 整体流程
 
